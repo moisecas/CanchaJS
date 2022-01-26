@@ -1,0 +1,77 @@
+Creamos en el html nuestro canvas, dentro del body antes del script
+
+
+Luego en el js, creamos la variable que va a contener el canvas
+var can = document.getElementById("cancha"); para el ejemplo, cancha es el id del canvas en html. 
+
+Luego, el lienzo donde va a ir dibujado, para el ejemplo se llama papel, entre parentesis el tipo de dimensión
+var papel = can.getContext("2d"); 
+
+Luego, la ruta donde se carga el mapa
+var mapa = "cancha.png"; 
+
+Ahora se le envía la imagen al canvas, se crea un objeto totalmente nuevo. Clase image o definición del objeto, guardado dentro de una variable. 
+
+En el evento load estamos listos para cargar la imagen. 
+Se arega imagen.addEventListener("load", dibujar), va nombre de evento y función, se debe crear la función. 
+var fondo = new Image();
+fondo.src = mapa; 
+fondo.addEventListener("load", dibujar)
+En canvas la esquina superior derecha es el punto 0,0. Hay es donde se va a dibujar la imagen, para que se dibuje completa.  
+Canvas siempre dibuja encima de lo siguiente. 
+
+Se debe crear una función y una variable por cada imagen. 
+
+var jugador1 = new Image();
+jugador1.src = "jugador1.png"; se le da la úbicación de la imagen
+jugador1.addEventListener("load", dibujarJugador1); en el evento load le digo que me dibuje jugador1.png 
+
+En el momento en que el evento load se dispara es cuando se dibuja los elementos independieente de su orden en el código. 
+
+Para que aparezca cada elemento o imagen cuando yo quiera es necesario redibujar todo, lo que conocemos como taza de refresco en los videojuegos. 
+Crear una variable que le diga al canvas que el elemto ya esta listo para ser dibujado. if title esta listo? si.. ok, dibuja. Crear la variable para indicarme si ya esta lista la imagen. 
+Atributos: url, y si ya cargo.
+Objeto literal con la sintaxis de json, url para indicar donde esta la imagen 
+json: javascript object notation. 
+
+Todos nuestros objetos van a empezar en falso por defecto y luego serán verdaderos. 
+Dentro de los valores que le doy a una variable, separado cada cosa con , no ; teniendo cuenta que el último valor no lleva , y se cierra con llaves, la llave {} final se cierra con ; es decir }; 
+La función dibujar ejecuta cuando todo este listo. 
+
+La consola es nuestro mejor amigo para identificar errores. 
+Tener en cuenta que las variables definidas con var solo se declaran una vez 
+Fijarse bien de donde traemos las imagenes, puede ser que las direccionemos mal. Además orientar y definir bien hacia donde estamos dibujando.  
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
